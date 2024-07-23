@@ -1,0 +1,60 @@
+.proj-counter {
+  .number {
+    font-size: 5rem;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+    button {
+      font-size: 2rem;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+.proj-todolist {
+  form {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+
+    input {
+      padding: 10px;
+      border: none;
+      outline: none;
+      background: #88bcdf;
+      width: 100%;
+    }
+
+    button {
+      border-radius: 50px;
+      padding: 10px 40px;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin-top: 20px;
+    list-style: none;
+
+    li {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      text-align: left;
+      padding: 5px;
+      margin-bottom: 5px;
+      background: #eef6dc;
+    }
+
+    button {
+      padding: 4px 8px;
+      cursor: pointer;
+    }
+  }
+}

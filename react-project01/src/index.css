@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.project {
+  border-bottom: 2px solid lightgrey;
+  padding: 40px 20px 100px;
+}
+
+#root .project:last-child {
+  border-bottom: 0;
+}
+
+#root .project section {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+button {
+  outline: none;
+  border: none;
+  color: #fff;
+  background: #3498db;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
