@@ -30,7 +30,7 @@ function Accordion() {
 
   return (
     <>
-      <div className="project maxwidth accordion">
+      <div className="accordion maxwidth">
         <div className="btn-enable">
           <button onClick={() => setEnableMultiSelect(!enableMultiSelect)}>
             Enable <span>{enableMultiSelect ? "SINGLE" : "MULTI"}</span>{" "}
