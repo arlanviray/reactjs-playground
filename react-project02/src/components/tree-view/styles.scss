@@ -1,0 +1,17 @@
+.tree-view {
+  .menu-list {
+    li {
+      padding: 10px 0;
+    }
+  }
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .plusminus {
+      cursor: pointer;
+    }
+  }
+}

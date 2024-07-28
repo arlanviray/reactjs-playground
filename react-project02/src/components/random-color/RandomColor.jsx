@@ -32,17 +32,16 @@ function RandomColor() {
 
   useEffect(() => {
     if (colorType === "hex") {
-      console.log("hex");
+      // console.log("hex");
       handleRandomHEX();
     } else {
-      console.log("rgb");
+      // console.log("rgb");
       handleRandomRGB();
     }
   }, [colorType]);
 
   // set the color into body
   // document.body.style.background = color;
-
   // console.log(color);
 
   return (

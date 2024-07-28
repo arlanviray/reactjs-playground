@@ -1,16 +1,29 @@
 import { Link } from "react-router-dom";
 
 function Home() {
+  const pages = [
+    "Accordion",
+    "Random Color",
+    "Star Rating",
+    "Image Slider",
+    "Loadmore Data",
+    "Tree View",
+    "QR Code Generator",
+    "Light Dark Mode",
+    "Scroll Indicator",
+  ];
+
   return (
     <>
       <h2>Experimental Projects:</h2>
       <ol>
-        <li>
-          <Link to="/accordion">Accordion</Link>
-        </li>
-        <li>
-          <Link to="/random-color">Random Color</Link>
-        </li>
+        {pages.map((page, index) => (
+          <li key={index}>
+            <Link to={`/${page.toLowerCase().replaceAll(" ", "-")}`}>
+              {page}
+            </Link>
+          </li>
+        ))}
       </ol>
     </>
   );

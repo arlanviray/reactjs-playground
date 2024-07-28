@@ -1,0 +1,19 @@
+.star-rating {
+  .stars {
+    display: flex;
+    justify-content: center;
+
+    .active {
+      color: yellow;
+    }
+
+    .inactive {
+      color: black;
+    }
+  }
+
+  .ratings {
+    font-size: 2em;
+    margin-top: 1em;
+  }
+}

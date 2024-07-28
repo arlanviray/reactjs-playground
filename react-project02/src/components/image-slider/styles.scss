@@ -1,0 +1,53 @@
+.image-slider {
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .images {
+    .hide {
+      display: none;
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    color: white;
+    width: 2em;
+    height: 2em;
+    filter: drop-shadow(0px 0px 5px #555);
+    cursor: pointer;
+
+    &.left {
+      left: 1em;
+    }
+    &.right {
+      right: 1em;
+    }
+  }
+
+  .indicators {
+    position: absolute;
+    bottom: 1em;
+    display: flex;
+    gap: 8px;
+
+    button {
+      border: none;
+      outline: none;
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      background-color: lightgray;
+      filter: drop-shadow(0px 0px 3px #555);
+      cursor: pointer;
+
+      &.active {
+        background-color: red;
+        pointer-events: none;
+      }
+    }
+  }
+}

@@ -1,11 +1,18 @@
+$red: #ff0100;
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
   background-color: black;
-  border-bottom: 3px solid #ff0100;
+  border-bottom: 3px solid $red;
   padding: 10px;
+
+  img {
+    display: inline !important;
+    max-width: none !important;
+  }
 }
 
 main {
@@ -19,13 +26,11 @@ h3 {
 }
 
 a {
-  color: red;
+  color: $red;
   text-decoration: none;
 }
 
 img {
-  display: inline !important;
-  max-width: none !important;
   vertical-align: text-bottom; // remove space at the bottom
 }
 
@@ -49,4 +54,14 @@ button {
 .maxwidth {
   max-width: 800px;
   margin: 0 auto;
+
+  &.mwlarge {
+    max-width: 1000px;
+  }
+  &.mwmedium {
+    max-width: 600px;
+  }
+  &.mwsmall {
+    max-width: 400px;
+  }
 }
