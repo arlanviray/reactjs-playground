@@ -12,6 +12,7 @@ import TreeView from "./components/tree-view/TreeView";
 import QRCodeGenerator from "./components/qr-code-generator/QRCodeGenerator";
 import LightDarkMode from "./components/light-dark-mode/LightDarkMode";
 import ScrollIndicator from "./components/scroll-indicator/ScrollIndicator";
+import CustomTabs from "./components/custom-tabs/CustomTabs";
 
 export const router = createBrowserRouter([
   {
@@ -47,7 +48,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "/loadmore-data",
-        element: <LoadmoreData />,
+        element: (
+          <LoadmoreData url={"https://dummyjson.com/products?limit=20"} />
+        ),
       },
       {
         path: "/tree-view",
@@ -63,7 +66,13 @@ export const router = createBrowserRouter([
       },
       {
         path: "/scroll-indicator",
-        element: <ScrollIndicator />,
+        element: (
+          <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} />
+        ),
+      },
+      {
+        path: "/custom-tabs",
+        element: <CustomTabs />,
       },
     ],
   },

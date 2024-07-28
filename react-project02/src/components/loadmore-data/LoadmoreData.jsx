@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./styles.scss";
 
-function LoadmoreData() {
+function LoadmoreData({ url }) {
   const [products, setProducts] = useState([]);
   const [loadCount, setLoadCount] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -12,9 +12,7 @@ function LoadmoreData() {
     try {
       setLoading(true);
 
-      const response = await fetch(
-        `https://dummyjson.com/products?limit=20&skip=${loadCount * 20}`
-      );
+      const response = await fetch(`${url}&skip=${loadCount * 20}`);
       const data = await response.json();
 
       if (data && data.products) {

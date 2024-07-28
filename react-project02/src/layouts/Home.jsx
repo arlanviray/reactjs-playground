@@ -11,6 +11,7 @@ function Home() {
     "QR Code Generator",
     "Light Dark Mode",
     "Scroll Indicator",
+    "Custom Tabs",
   ];
 
   return (

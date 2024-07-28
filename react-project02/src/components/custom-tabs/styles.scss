@@ -1,0 +1,29 @@
+.custom-tabs {
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 30px;
+
+    div {
+      font-weight: 700;
+      text-transform: uppercase;
+      color: white;
+      background-color: black;
+      border: 1px solid black;
+      padding: 10px 20px;
+      cursor: pointer;
+
+      &.active {
+        color: black;
+        background-color: limegreen;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .content p {
+    margin-bottom: 20px;
+  }
+}
