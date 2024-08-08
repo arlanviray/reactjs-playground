@@ -13,6 +13,9 @@ import QRCodeGenerator from "./components/qr-code-generator/QRCodeGenerator";
 import LightDarkMode from "./components/light-dark-mode/LightDarkMode";
 import ScrollIndicator from "./components/scroll-indicator/ScrollIndicator";
 import CustomTabs from "./components/custom-tabs/CustomTabs";
+import CustomModal from "./components/custom-modal/CustomModal";
+import GithubProfileFinder from "./components/github-profile-finder/GithubProfileFinder";
+import SearchAutocomplete from "./components/search-autocomplete/SearchAutocomplete";
 
 export const router = createBrowserRouter([
   {
@@ -73,6 +76,20 @@ export const router = createBrowserRouter([
       {
         path: "/custom-tabs",
         element: <CustomTabs />,
+      },
+      {
+        path: "/custom-modal",
+        element: <CustomModal />,
+      },
+      {
+        path: "/github-profile-finder",
+        element: <GithubProfileFinder />,
+      },
+      {
+        path: "/search-autocomplete",
+        element: (
+          <SearchAutocomplete url={"https://dummyjson.com/users?limit=50"} />
+        ),
       },
     ],
   },

@@ -12,6 +12,9 @@ function Home() {
     "Light Dark Mode",
     "Scroll Indicator",
     "Custom Tabs",
+    "Custom Modal",
+    "Github Profile Finder",
+    "Search Autocomplete",
   ];
 
   return (

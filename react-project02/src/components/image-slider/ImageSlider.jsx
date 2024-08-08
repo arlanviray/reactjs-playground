@@ -49,8 +49,8 @@ function ImageSlider({ url, page = 1, limit = 10 }) {
   return (
     <>
       <div className="image-slider maxwidth mwmedium">
-        {loading && <div className="center">Loading...</div>}
         {errMessage && <div className="center">{errMessage}</div>}
+        {loading && <div className="center">Loading...</div>}
 
         {images.length > 0 && (
           <>

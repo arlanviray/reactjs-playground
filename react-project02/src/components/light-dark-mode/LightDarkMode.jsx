@@ -1,4 +1,4 @@
-import useLocalStorage from "./useLocalStorage";
+import useLocalStorage from "../../helpers/useLocalStorage";
 import "./styles.scss";
 
 function LightDarkMode() {
@@ -8,7 +8,7 @@ function LightDarkMode() {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
-  console.log(theme);
+  // console.log(theme);
 
   return (
     <div className="light-dark-mode maxwidth" data-theme={theme}>

@@ -43,8 +43,8 @@ function LoadmoreData({ url }) {
   return (
     <>
       <div className="loadmore-data">
-        {loading && <div className="center">Loading...</div>}
         {errMessage && <div className="center">{errMessage}</div>}
+        {loading && <div className="center">Loading...</div>}
 
         {products.length > 0 && (
           <>

@@ -57,8 +57,8 @@ function ScrollIndicator({ url }) {
 
   return (
     <div className="scroll-indicator">
-      {loading && <div className="center">Loading...</div>}
       {errMessage && <div className="center">{errMessage}</div>}
+      {loading && <div className="center">Loading...</div>}
 
       {data.length > 0 && (
         <>

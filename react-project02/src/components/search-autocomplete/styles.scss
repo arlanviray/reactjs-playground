@@ -1,0 +1,44 @@
+.search-autocomplete {
+  position: relative;
+
+  input {
+    width: 100%;
+    outline: none;
+    border: 1px solid grey;
+    background-color: rgb(255, 232, 232);
+    padding: 5px 10px;
+  }
+
+  ul {
+    position: absolute;
+    top: 40px;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: aquamarine;
+
+    li {
+      cursor: pointer;
+      padding: 10px;
+    }
+  }
+
+  .selected-user {
+    text-align: center;
+    font-weight: 700;
+    margin-top: 20px;
+
+    img {
+      margin: 0 auto;
+    }
+
+    h2 {
+      margin: 0;
+    }
+
+    span {
+      text-transform: capitalize;
+    }
+  }
+}

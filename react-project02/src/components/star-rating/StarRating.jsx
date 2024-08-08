@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
+import useLocalStorage from "../../helpers/useLocalStorage";
 import "./styles.scss";
 
 function StarRating({ totalStars = 10 }) {
-  const [rating, setRating] = useState(0);
+  const [rating, setRating] = useLocalStorage("StarRating", 0);
   const [hover, setHover] = useState(0);
 
   const handleClick = (index) => {
     setRating(index);
-    localStorage.setItem("StarRating", index);
   };
 
   const handleMouseMove = (index) => {
@@ -20,10 +20,7 @@ function StarRating({ totalStars = 10 }) {
   };
 
   useEffect(() => {
-    if (typeof Storage !== "undefined") {
-      const lsStarRating = localStorage.getItem("StarRating");
-      setRating(lsStarRating === null ? 0 : lsStarRating);
-    }
+    setRating(rating);
   }, [rating]);
 
   // console.log(hover);
