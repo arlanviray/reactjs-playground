@@ -2,7 +2,7 @@ function SelectedUser({ data }) {
   const { firstName, lastName, image, age, gender } = data[0];
 
   return (
-    <div className="selected-user">
+    <div className="selected-user center">
       <img src={image} />
       <h2>
         {firstName} {lastName}

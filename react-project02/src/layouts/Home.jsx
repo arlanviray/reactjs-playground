@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom";
 
 function Home() {
-  const pages = [
+  const games = [
+    "Number Guessing",
+    "Rock, Paper, Scissor",
+    "Tic Tac Toe",
+    "Memory Game",
+    "Hangman",
+  ];
+
+  const projects = [
     "Accordion",
     "Random Color",
     "Star Rating",
@@ -19,16 +27,36 @@ function Home() {
 
   return (
     <>
-      <h2>Experimental Projects:</h2>
-      <ol>
-        {pages.map((page, index) => (
-          <li key={index}>
-            <Link to={`/${page.toLowerCase().replaceAll(" ", "-")}`}>
-              {page}
-            </Link>
-          </li>
-        ))}
-      </ol>
+      <div className="exp-container">
+        <h2>Experimental Games:</h2>
+        <ol>
+          {games.map((game, index) => (
+            <li key={index}>
+              <Link
+                to={`/${game
+                  .toLowerCase()
+                  .replaceAll(" ", "-")
+                  .replaceAll(",", "")}`}
+              >
+                {game}
+              </Link>
+            </li>
+          ))}
+        </ol>
+      </div>
+
+      <div className="exp-container">
+        <h2>Experimental Projects:</h2>
+        <ol>
+          {projects.map((project, index) => (
+            <li key={index}>
+              <Link to={`/${project.toLowerCase().replaceAll(" ", "-")}`}>
+                {project}
+              </Link>
+            </li>
+          ))}
+        </ol>
+      </div>
     </>
   );
 }

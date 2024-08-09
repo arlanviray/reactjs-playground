@@ -5,6 +5,7 @@ import "./styles.scss";
 function ImageSlider({ url, page = 1, limit = 10 }) {
   const [images, setImages] = useState([]);
   const [currSlide, setCurrSlide] = useState(0);
+  const [imgLoaded, setImgLoaded] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errMessage, setErrMessage] = useState(null);
 
@@ -49,7 +50,53 @@ function ImageSlider({ url, page = 1, limit = 10 }) {
   return (
     <>
       <div className="image-slider maxwidth mwmedium">
-        {errMessage && <div className="center">{errMessage}</div>}
+        {(() => {
+          if (errMessage) {
+            return <div className="center">{errMessage}</div>;
+          } else {
+            return loading ? (
+              <div className="center">Loading...</div>
+            ) : (
+              <div className="container">
+                <div className="images">
+                  {images.map((image, index) => (
+                    <img
+                      key={image.id}
+                      src={image.download_url}
+                      style={{
+                        display: currSlide === index ? "block" : "none",
+                      }}
+                      onLoad={() => setImgLoaded(true)}
+                    />
+                  ))}
+                </div>
+                {imgLoaded && (
+                  <>
+                    <BsArrowLeftCircleFill
+                      className="arrow left"
+                      onClick={handlePrevSlide}
+                    />
+                    <BsArrowRightCircleFill
+                      className="arrow right"
+                      onClick={handleNextSlide}
+                    />
+                    <div className="indicators">
+                      {images.map((_, index) => (
+                        <button
+                          key={index}
+                          onClick={() => setCurrSlide(index)}
+                          className={currSlide === index ? "active" : ""}
+                        ></button>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </div>
+            );
+          }
+        })()}
+
+        {/* {errMessage && <div className="center">{errMessage}</div>}
         {loading && <div className="center">Loading...</div>}
 
         {images.length > 0 && (
@@ -83,7 +130,7 @@ function ImageSlider({ url, page = 1, limit = 10 }) {
               </div>
             </div>
           </>
-        )}
+        )} */}
       </div>
     </>
   );

@@ -3,6 +3,13 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import Home from "./layouts/Home";
 import Error from "./layouts/Error";
+// games
+import NumberGuessing from "./games/number-guessing/NumberGuessing";
+import RockPaperScissor from "./games/rock-paper-scissor/RockPaperScissor";
+import TicTacToe from "./games/tic-tac-toe/TicTacToe";
+import MemoryGame from "./games/memory-game/MemoryGame";
+import Hangman from "./games/hangman/Hangman";
+// projects
 import Accordion from "./components/accordion/Accordion";
 import RandomColor from "./components/random-color/RandomColor";
 import StarRating from "./components/star-rating/StarRating";
@@ -27,6 +34,28 @@ export const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
+      // games
+      {
+        path: "/number-guessing",
+        element: <NumberGuessing />,
+      },
+      {
+        path: "/rock-paper-scissor",
+        element: <RockPaperScissor />,
+      },
+      {
+        path: "/tic-tac-toe",
+        element: <TicTacToe />,
+      },
+      {
+        path: "/memory-game",
+        element: <MemoryGame />,
+      },
+      {
+        path: "/hangman",
+        element: <Hangman />,
+      },
+      // projects
       {
         path: "/accordion",
         element: <Accordion />,

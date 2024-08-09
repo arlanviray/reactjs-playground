@@ -35,16 +35,23 @@ img {
   vertical-align: text-bottom; // remove space at the bottom
 }
 
-button {
+button,
+[type="submit"] {
   cursor: pointer;
 
   &[disabled] {
     cursor: auto;
   }
-
+}
+button {
   span {
     font-weight: 700;
     padding: 0 6px;
+  }
+}
+[type="submit"] {
+  &[disabled] {
+    opacity: 0.5;
   }
 }
 
@@ -64,5 +71,13 @@ button {
   }
   &.mwsmall {
     max-width: 400px;
+  }
+}
+
+.exp-container {
+  padding-bottom: 40px;
+
+  &:last-child {
+    padding-bottom: 0;
   }
 }
