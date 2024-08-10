@@ -71,7 +71,7 @@ function NumberGuessing() {
   // console.log(guessAttempts, success);
 
   return (
-    <div className="number-guessing maxwidth mwmedium center">
+    <div className="game--number-guessing maxwidth mwmedium center">
       {/* <h2 style={{ display: "none" }}>{numberToGuess}</h2> */}
 
       {(() => {

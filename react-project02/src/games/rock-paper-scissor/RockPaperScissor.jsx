@@ -100,7 +100,7 @@ function RockPaperScissor() {
   // console.log(playerChoice, computerChoice);
 
   return (
-    <div className="rock-paper-scissor maxwidth mwmedium center">
+    <div className="game--rock-paper-scissor maxwidth mwmedium center">
       <div className="players">
         <div className="column">
           <div className="name field">

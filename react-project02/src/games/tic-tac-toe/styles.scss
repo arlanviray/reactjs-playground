@@ -1,2 +1,75 @@
-.tic-tac-toe {
+.game--tic-tac-toe {
+  $player0Color: black;
+  $player1Color: green;
+  $player2Color: palevioletred;
+
+  .players {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    font-weight: 700;
+    margin-bottom: 40px;
+
+    input {
+      width: 150px;
+      text-align: center;
+      text-transform: capitalize;
+      outline: none;
+      border: 0;
+      padding: 5px;
+
+      color: white;
+      &:focus {
+        color: black;
+        background-color: white;
+      }
+    }
+
+    div {
+      &:first-child {
+        input {
+          background-color: $player1Color;
+        }
+      }
+
+      &:last-child {
+        input {
+          background-color: $player2Color;
+          &[disabled] {
+            background-color: $player0Color;
+          }
+        }
+      }
+    }
+  }
+
+  .board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    button {
+      font-size: 5em;
+      font-weight: 700;
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  h3 {
+    margin: 20px 0;
+  }
+
+  .p0-color {
+    color: $player0Color;
+    text-transform: capitalize;
+  }
+  .p1-color {
+    color: $player1Color;
+    text-transform: capitalize;
+  }
+  .p2-color {
+    color: $player2Color;
+    text-transform: capitalize;
+  }
 }

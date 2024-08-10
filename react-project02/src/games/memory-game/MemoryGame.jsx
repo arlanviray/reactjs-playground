@@ -1,5 +1,5 @@
 function MemoryGame() {
-  return <div className="memory-game">MemoryGame</div>;
+  return <div className="game--memory-game">MemoryGame</div>;
 }
 
 export default MemoryGame;
