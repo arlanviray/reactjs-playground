@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import useLocalStorage from "../../helpers/useLocalStorage";
+import imgGameOver from "../../assets/gameover.png";
 import webpWellDone from "../../assets/welldone.webp";
 import "./styles.scss";
 
@@ -77,6 +78,9 @@ function NumberGuessing() {
         if (endGame) {
           return (
             <div className="game-end">
+              <div className="gameover">
+                <img src={imgGameOver} />
+              </div>
               {success ? (
                 <>
                   <p className="message-success">

@@ -1,0 +1,141 @@
+.rock-paper-scissor {
+  $playerColor: green;
+  $computerColor: red;
+
+  background-color: bisque;
+  padding: 20px;
+
+  .players {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    font-weight: 700;
+
+    .column {
+      width: 150px;
+
+      .name,
+      input {
+        // width: 150px;
+        text-transform: uppercase;
+        padding: 5px;
+      }
+
+      .name {
+        color: white;
+        background-color: $computerColor;
+
+        &.field {
+          padding: 0;
+        }
+      }
+
+      input {
+        width: 100%;
+        text-align: center;
+        outline: none;
+        border: 0;
+
+        &.updatedname {
+          color: white;
+          background-color: $playerColor;
+
+          &:focus {
+            color: black;
+            background-color: white;
+          }
+        }
+      }
+
+      .score {
+        font-size: 2em;
+        padding-top: 10px;
+      }
+
+      .icons {
+        padding-top: 20px;
+
+        svg {
+          width: 80px;
+          height: 80px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  .messages {
+    padding: 40px 0;
+
+    svg {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+    }
+  }
+
+  .player-events {
+    .buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      button {
+        width: 100px;
+        outline: none;
+        border: 1px solid green;
+        background-color: lightgreen;
+        padding-top: 5px;
+        &:hover {
+          background-color: rgb(186, 242, 186);
+        }
+
+        svg {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  .endgame {
+    .gameover {
+      padding: 20px 0;
+    }
+
+    picture {
+      margin-bottom: 20px;
+      img {
+        margin: 0 auto;
+      }
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    button {
+      font-weight: 700;
+    }
+  }
+
+  .plyr-paper,
+  .plyr-rock {
+    transform: rotate(90deg);
+  }
+  .plyr-scissors {
+    transform: scaleX(-1);
+  }
+
+  .comp-paper,
+  .comp-rock {
+    transform: rotate(-90deg) scaleX(-1);
+  }
+
+  .plyr-color {
+    color: $playerColor;
+  }
+  .comp-color {
+    color: $computerColor;
+  }
+}
