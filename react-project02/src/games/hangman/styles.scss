@@ -1,2 +1,59 @@
 .game--hangman {
+  .progress {
+    svg {
+      margin: 0 auto;
+
+      line {
+        fill: transparent;
+        stroke: black;
+        stroke-width: 4px;
+        stroke-linecap: round;
+      }
+    }
+  }
+
+  .word {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 30px;
+    span {
+      color: lightgray;
+    }
+  }
+
+  .keyboard {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    button {
+      font-size: 1.2em;
+      width: 50px;
+      padding: 5px;
+    }
+  }
+
+  .hint {
+    color: red;
+    margin-bottom: 30px;
+    button {
+      outline: none;
+      border: 0;
+      color: white;
+      background-color: red;
+    }
+  }
+
+  .status {
+    font-size: 1.5em;
+    button {
+      font-size: initial;
+      outline: none;
+      border: 0;
+      color: white;
+      background-color: green;
+      margin-top: 10px;
+    }
+  }
 }
