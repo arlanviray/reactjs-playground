@@ -7,3 +7,7 @@ export const replaceArrayValue = (arr, oldValue, newValue) => {
 
   return arr;
 };
+
+export const shuffleArray = (arr) => {
+  return arr.sort(() => 0.5 - Math.random());
+};

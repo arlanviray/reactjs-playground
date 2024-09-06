@@ -9,6 +9,7 @@ import RockPaperScissor from "./games/rock-paper-scissor/RockPaperScissor";
 import TicTacToe from "./games/tic-tac-toe/TicTacToe";
 import MemoryGame from "./games/memory-game/MemoryGame";
 import Hangman from "./games/hangman/Hangman";
+import WordScramble from "./games/word-scramble/WordScramble";
 // projects
 import Accordion from "./components/accordion/Accordion";
 import RandomColor from "./components/random-color/RandomColor";
@@ -54,6 +55,10 @@ export const router = createBrowserRouter([
       {
         path: "/hangman",
         element: <Hangman />,
+      },
+      {
+        path: "/word-scramble",
+        element: <WordScramble />,
       },
       // projects
       {

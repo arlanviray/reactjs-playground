@@ -6,7 +6,7 @@ import "./styles.scss";
 
 function NumberGuessing() {
   const [recordGuesses, setRecordGuesses] = useLocalStorage(
-    "GuessNumberRecord",
+    "NumberGuessingRecord",
     0
   );
   const [newRecord, setNewRecord] = useState(false);

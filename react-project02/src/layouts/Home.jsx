@@ -7,6 +7,7 @@ function Home() {
     "Tic Tac Toe",
     "Memory Game",
     "Hangman",
+    "Word Scramble",
   ];
 
   const projects = [

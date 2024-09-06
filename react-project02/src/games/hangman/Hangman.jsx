@@ -38,6 +38,7 @@ function Hangman() {
 
   const handleResetGame = () => {
     getRandomWord();
+    setShowHint(false);
     setCorrects([]);
     setFails([]);
     setStatus("");
