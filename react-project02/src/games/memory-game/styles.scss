@@ -1,2 +1,71 @@
 .game--memory-game {
+  .level {
+    padding: 5px;
+    padding-bottom: 15px;
+
+    strong {
+      margin-right: 10px;
+    }
+  }
+
+  .level,
+  .cards {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .item {
+      display: flex;
+      justify-content: center;
+      padding: 5px;
+
+      .face,
+      .back {
+        width: 70px;
+        height: 70px;
+      }
+
+      .face {
+        position: absolute;
+        transform: rotateY(90deg);
+        transition: all ease-in 0.25s;
+      }
+
+      .back {
+        cursor: pointer;
+        background-color: lightslategray;
+        border: 1px solid darkslategrey;
+        transition: all ease-in 0.25s;
+        transition-delay: 0.25s;
+      }
+    }
+
+    .toggled {
+      .face {
+        transform: rotateY(0deg);
+        transition-delay: 0.25s;
+      }
+
+      .back {
+        transform: rotateY(90deg);
+        transition-delay: 0s;
+      }
+    }
+  }
+
+  .message {
+    padding-top: 15px;
+  }
+
+  &.tiles-24 {
+    .level,
+    .cards {
+      max-width: 640px;
+    }
+  }
 }
