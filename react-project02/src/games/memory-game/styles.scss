@@ -1,10 +1,19 @@
 .game--memory-game {
+  $level_easy: lightslategray;
+  $level_hard: lightseagreen;
+  $level_harder: lightcoral;
+
   .level {
     padding: 5px;
     padding-bottom: 15px;
 
     strong {
       margin-right: 10px;
+    }
+
+    select {
+      color: white;
+      background-color: $level_easy;
     }
   }
 
@@ -38,10 +47,18 @@
 
       .back {
         cursor: pointer;
-        background-color: lightslategray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $level_easy;
         border: 1px solid darkslategrey;
         transition: all ease-in 0.25s;
         transition-delay: 0.25s;
+
+        img {
+          height: 40px;
+          opacity: 0.3;
+        }
       }
     }
 
@@ -62,10 +79,38 @@
     padding-top: 15px;
   }
 
+  .loading {
+    padding-top: 30px;
+  }
+
+  &.tiles-18 {
+    .level {
+      select {
+        background-color: $level_hard;
+      }
+    }
+    .cards {
+      .back {
+        background-color: $level_hard;
+      }
+    }
+  }
+
   &.tiles-24 {
     .level,
     .cards {
       max-width: 640px;
+    }
+
+    .level {
+      select {
+        background-color: $level_harder;
+      }
+    }
+    .cards {
+      .back {
+        background-color: $level_harder;
+      }
     }
   }
 }

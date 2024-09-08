@@ -4,7 +4,35 @@
     text-transform: uppercase;
   }
 
-  input {
-    text-transform: uppercase;
+  .hint {
+    padding-bottom: 20px;
+  }
+
+  .time {
+    color: blue;
+    padding-bottom: 20px;
+  }
+
+  .field {
+    padding-bottom: 20px;
+    input {
+      width: 240px;
+      text-transform: uppercase;
+    }
+  }
+
+  .message {
+    color: red;
+    padding-bottom: 20px;
+  }
+
+  .buttons {
+    button {
+      margin: 0 10px;
+    }
+  }
+
+  .info {
+    padding-top: 20px;
   }
 }

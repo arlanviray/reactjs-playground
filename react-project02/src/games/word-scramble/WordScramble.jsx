@@ -95,16 +95,18 @@ function WordScramble() {
   // console.log(retrieveData.word, scrambleWord);
 
   return (
-    <div className="game--word-scramble maxwidth mwmedium center">
+    <div className="game--word-scramble maxwidth center">
       <h1>{scrambleWord}</h1>
-      <p>
+      <div className="hint">
         <strong>Hint:</strong> {retrieveData.hint}
-      </p>
+      </div>
 
       {!endGame && (
         <>
-          <div>Time Left: {countdown}s</div>
-          <div>
+          <div className="time">
+            <strong>Time Left:</strong> {countdown}s
+          </div>
+          <div className="field">
             <input
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
@@ -118,10 +120,12 @@ function WordScramble() {
         </>
       )}
 
-      <div
-        className="message"
-        dangerouslySetInnerHTML={{ __html: message }}
-      ></div>
+      {message && (
+        <div
+          className="message"
+          dangerouslySetInnerHTML={{ __html: message }}
+        ></div>
+      )}
 
       <div className="buttons">
         {endGame ? (
@@ -134,9 +138,13 @@ function WordScramble() {
         )}
       </div>
 
-      <div>
-        <div>Corrects: {corrects}</div>
-        <div>Current Record: {recordCorrects}</div>
+      <div className="info">
+        <div>
+          <strong>Corrects:</strong> {corrects}
+        </div>
+        <div>
+          <strong>Current Record:</strong> {recordCorrects}
+        </div>
       </div>
       {endGame && recordBroke && <div>Nice, you have broke your record.</div>}
     </div>

@@ -104,7 +104,7 @@ let data = [];
 images.map((image) => {
   data.push({
     name: image,
-    image: `./memorygame_food/${image}.png`,
+    image: `./memorygame-food/${image}.png`,
     matched: false,
   });
 });

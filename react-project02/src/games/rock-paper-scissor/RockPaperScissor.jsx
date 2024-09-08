@@ -6,8 +6,6 @@ import {
   FaHandshake,
 } from "react-icons/fa";
 import useLocalStorage from "../../helpers/useLocalStorage";
-import imgGameOver from "../../assets/gameover.png";
-import webpWellDone from "../../assets/welldone.webp";
 import "./styles.scss";
 
 function RockPaperScissor() {
@@ -139,13 +137,13 @@ function RockPaperScissor() {
         // Game over result
         <div className="endgame">
           <div className="gameover">
-            <img src={imgGameOver} />
+            <img src="/game-over.png" />
           </div>
 
           {playerScore > computerScore && (
             <picture>
-              <source srcSet={webpWellDone} type="image/webp" />
-              <img src={webpWellDone} />
+              <source srcSet="/well-done.webp" type="image/webp" />
+              <img src="/well-done.webp" />
             </picture>
           )}
 

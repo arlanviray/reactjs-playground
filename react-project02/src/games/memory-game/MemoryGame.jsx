@@ -34,7 +34,7 @@ function MemoryGame() {
       setSecondCard(null);
       setMoves(0);
       setWon(0);
-    }, 1000);
+    }, 500);
   };
 
   // this function helps in storing the firstCard and secondCard value
@@ -49,7 +49,7 @@ function MemoryGame() {
 
   // select on change value
   const handleLevelChange = (e) => {
-    setLevel(e.target.value);
+    setLevel(Number(e.target.value));
   };
 
   // after the slected images have been checked for equivalency we empty the firstCard and secondCard component
@@ -104,24 +104,38 @@ function MemoryGame() {
         </select>
       </div>
 
-      <div className="cards">
-        {cardsArray.map((item) => (
-          <Card
-            key={item.id}
-            item={item}
-            handleSelectedCards={handleSelectedCards}
-            toggled={
-              item === firstCard || item === secondCard || item.matched === true
-            }
-            stopFlip={stopFlip}
-          />
-        ))}
-      </div>
+      {cardsArray.length > 0 ? (
+        <>
+          <div className="cards">
+            {cardsArray.map((item) => (
+              <Card
+                key={item.id}
+                item={item}
+                handleSelectedCards={handleSelectedCards}
+                toggled={
+                  item === firstCard ||
+                  item === secondCard ||
+                  item.matched === true
+                }
+                stopFlip={stopFlip}
+              />
+            ))}
+          </div>
 
-      {cardsArray.length > 0 && (
-        <div className="message center">
-          <strong>Moves:</strong> {moves}
-        </div>
+          <div className="message center">
+            {won === level ? (
+              <>
+                You Won in <strong>{moves}</strong> moves
+              </>
+            ) : (
+              <>
+                <strong>Moves:</strong> {moves}
+              </>
+            )}
+          </div>
+        </>
+      ) : (
+        <div className="loading center">Loading...</div>
       )}
     </div>
   );

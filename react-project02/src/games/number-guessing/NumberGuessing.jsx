@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import useLocalStorage from "../../helpers/useLocalStorage";
-import imgGameOver from "../../assets/gameover.png";
-import webpWellDone from "../../assets/welldone.webp";
 import "./styles.scss";
 
 function NumberGuessing() {
@@ -79,7 +77,7 @@ function NumberGuessing() {
           return (
             <div className="game-end">
               <div className="gameover">
-                <img src={imgGameOver} />
+                <img src="/game-over.png" />
               </div>
               {success ? (
                 <>
@@ -88,8 +86,8 @@ function NumberGuessing() {
                     {newRecord ? " plus you beat your current record!" : ""}
                   </p>
                   <picture>
-                    <source srcSet={webpWellDone} type="image/webp" />
-                    <img src={webpWellDone} />
+                    <source srcSet="/well-done.webp" type="image/webp" />
+                    <img src="/well-done.webp" />
                   </picture>
                 </>
               ) : (

@@ -6,7 +6,9 @@ function Card({ item, handleSelectedCards, toggled, stopFlip }) {
         <div
           className="back"
           onClick={() => !stopFlip && handleSelectedCards(item)}
-        ></div>
+        >
+          <img src="/question-mark.png" />
+        </div>
       </div>
     </div>
   );
