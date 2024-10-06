@@ -11,17 +11,17 @@ function Home() {
   ];
 
   const projects = [
-    "Accordion",
+    // "Accordion",
     "Random Color",
     "Star Rating",
     "Image Slider",
     "Loadmore Data",
-    "Tree View",
+    // "Tree View",
     "QR Code Generator",
-    "Light Dark Mode",
+    // "Light Dark Mode",
     "Scroll Indicator",
-    "Custom Tabs",
-    "Custom Modal",
+    // "Custom Tabs",
+    // "Custom Modal",
     "Github Profile Finder",
     "Search Autocomplete",
   ];

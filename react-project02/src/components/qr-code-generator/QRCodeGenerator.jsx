@@ -3,7 +3,7 @@ import QRCode from "react-qr-code";
 import "./styles.scss";
 
 function QRCodeGenerator() {
-  const [qrCode, setQrCode] = useState("");
+  const [qrCode, setQrCode] = useState("https://www.creativewiz.uk/work/all");
   const [inputValue, setInputValue] = useState("");
 
   const handleOnchangeInput = (e) => {
